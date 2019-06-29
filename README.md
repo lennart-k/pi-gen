@@ -1,7 +1,9 @@
 # pi-gen
 
-_Tool used to create the raspberrypi.org Raspbian images_
-
+This is a fork of Raspbian with a few tweaks that will get you running faster.
+This includes things like ssh enabled by default, and tools like `git`,
+`python3-pip`, `pigpio` and `socat` preinstalled.
+Also you can set your Raspberry Pi's hostname and timezone in config
 
 ## Dependencies
 
@@ -85,6 +87,10 @@ The following environment variables are supported:
  * `FIRST_USER_PASS` (Default: "raspberry")
 
    Password for the first user
+
+ * `TIMEZONE` (Default: "Europe/London")
+
+   Timezone for the Raspberry Pi
 
  * `WPA_ESSID`, `WPA_PASSWORD` and `WPA_COUNTRY` (Default: unset)
 
@@ -233,27 +239,8 @@ maintenance and allows for more easy customization.
    creates necessary groups and gives the pi user access to sudo and the
    standard console hardware permission groups.
 
-   There are a few tools that may not make a whole lot of sense here for
-   development purposes on a minimal system such as basic Python and Lua
-   packages as well as the `build-essential` package.  They are lumped right
-   in with more essential packages presently, though they need not be with
-   pi-gen.  These are understandable for Raspbian's target audience, but if
-   you were looking for something between truly minimal and Raspbian-Lite,
-   here's where you start trimming.
-
- - **Stage 3** - desktop system.  Here's where you get the full desktop system
-   with X11 and LXDE, web browsers, git for development, Raspbian custom UI
-   enhancements, etc.  This is a base desktop system, with some development
-   tools installed.
-
- - **Stage 4** - Raspbian system meant to fit on a 4GB card.  More development
-   tools, an email client, learning tools like Scratch, specialized packages
-   like sonic-pi, system documentation, office productivity, etc.  This is the
-   stage that installs all of the things that make Raspbian friendly to new
-   users.
-
- - **Stage 5** - The official Raspbian Desktop image. Right now only adds
-   Mathematica.
+ - **Stage 3** - medium system. This stage contains many useful packages like
+   `Python 3 with pip`, `git`, `pigpio` and `socat`
 
 ### Stage specification
 
