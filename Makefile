@@ -3,3 +3,6 @@ dev:
 
 shell:
 	sudo docker run -it --privileged --volumes-from=pigen_work pi-gen /bin/bash
+
+clean-docker:
+	docker rm -v -f pigen_work
