@@ -284,6 +284,14 @@ follows:
  * Once you're happy with the image you can remove the SKIP_IMAGES files and
    export your image to test
 
+## Running an image in QEMU
+
+* Install the `qemu-system-arm` package
+* Build the Raspbian image
+* Run QEMU:
+    
+      qemu-system-arm -drive format=raw,file=<ABSOLUTE_PATH>/deploy/2019-06-28-CustomisedRaspbian-lite.img -kernel kernel-qemu-4.4.34-jessie -machine versatilepb -cpu arm1176 -m 256 -serial stdio  -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw"
+
 # Troubleshooting
 
 ## `64 Bit Systems`
