@@ -71,6 +71,10 @@ The following environment variables are supported:
 
    Output directory for target system images and NOOBS bundles.
 
+ * `SKIP_STAGES` (Default: `""`)
+   
+   Space seperated list of stages to skip. This is a simpler alternative to `SKIP` files
+
  * `DEPLOY_ZIP` (Default: `1`)
 
    Setting to `0` will deploy the actual image (`.img`) instead of a zipped image (`.zip`).
