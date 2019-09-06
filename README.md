@@ -2,7 +2,7 @@
 
 This is a fork of Raspbian with a few tweaks that will get you running faster.
 This includes things like ssh enabled by default, and tools like `git`,
-`python3-pip`, `pigpio` and `socat` preinstalled.
+`python3-pip`, `pigpio`, `docker`and `socat` preinstalled.
 Also you can set your Raspberry Pi's hostname and timezone in config
 
 ## Dependencies
