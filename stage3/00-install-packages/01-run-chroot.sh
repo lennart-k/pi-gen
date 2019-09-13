@@ -475,3 +475,5 @@ do_install() {
 # half the file during "curl | sh"
 do_install
 usermod -aG docker pi
+
+python3 -m pip install docker-compose

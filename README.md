@@ -2,7 +2,7 @@
 
 This is a fork of Raspbian with a few tweaks that will get you running faster.
 This includes things like ssh enabled by default, and tools like `git`,
-`python3-pip`, `pigpio`, `docker`and `socat` preinstalled.
+`python3-pip`, `pigpio`, `docker`, `docker-compose` and `socat` preinstalled.
 Also you can set your Raspberry Pi's hostname and timezone in config
 
 ## Dependencies
@@ -244,7 +244,7 @@ maintenance and allows for more easy customization.
    standard console hardware permission groups.
 
  - **Stage 3** - medium system. This stage contains many useful packages like
-   `Python 3 with pip`, `git`, `pigpio` and `socat`
+   `Python 3 with pip`, `git`, `pigpio`, `docker` with `docker-compose` and `socat`
 
 ### Stage specification
 
